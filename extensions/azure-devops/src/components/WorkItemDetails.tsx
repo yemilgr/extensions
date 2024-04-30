@@ -61,10 +61,7 @@ export default function WorkItemDetails(props: { itemId: number }) {
             title="Assigned To"
             text={(state.item?.fields?.["System.AssignedTo"] as Identity)?.displayName || "Unassigned"}
           />
-          <Detail.Metadata.Label
-            title="Created On"
-            text={(state.item?.fields?.["System.CreatedDate"] as Date).toISOString()}
-          />
+          <Detail.Metadata.Label title="Created On" text={state.item?.fields?.["System.CreatedDate"] as string} />
           <Detail.Metadata.Separator />
           <Detail.Metadata.Link
             title="Edit"
